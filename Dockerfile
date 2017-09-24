@@ -42,16 +42,6 @@ RUN echo '#!/bin/sh' > /home/developer/start.sh && \
 RUN apt-get remove -y firefox && \
     apt-get purge -y firefox
 
-# RUN tar -xjf firefox-46.0.tar.bz2
-# RUN bunzip2 firefox-46.0.1.tar.bz2
-# RUN tar xvf firefox-46.0.1.tar
-# RUN ln -s /opt/firefox/firefox /usr/bin/firefox
-
-# RUN rm -rf  /opt/firefox
-# RUN mv firefox /opt/firefox46
-# RUN mv /usr/bin/firefox /usr/bin/firefox.old
-# RUN ln -s /opt/firefox46/firefox /usr/bin/firefox
-
 RUN mkdir /selenium
 COPY selenium /selenium/
 
@@ -60,6 +50,13 @@ COPY firefox /firefox/
 
 RUN dpkg -i /firefox/firefox-mozilla-build_46.0-0ubuntu1_amd64.deb
 # RUN /usr/bin/firefox -install-global-extension /selenium/selenium_builder-3.1.3-fx.xpi
+
+RUN apt-get install -y ruby rubygems ruby-dev build-essential
+
+RUN gem install selenium-webdriver -v 2.53.4
+RUN gem install faker
+
+RUN ln -s /firefox/geckodriver /usr/sbin/geckodriver
 
 USER developer
 ENV HOME /home/developer
