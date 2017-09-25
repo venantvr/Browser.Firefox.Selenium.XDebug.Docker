@@ -1,0 +1,102 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://recipe.concilio.com/lyfe-myconcilio/"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_2"
+      },
+      "text": "Hidden Field User Id VV"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_12"
+      },
+      "text": "VENANT-VALERY"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_13"
+      },
+      "text": "Rénald"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_10"
+      },
+      "text": "fake@email.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_17"
+      },
+      "text": "Adresse"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_20"
+      },
+      "text": "28000"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_21"
+      },
+      "text": "CHARTRES"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "gform_fields_82"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "input_82_24"
+      },
+      "text": "Phone"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "id",
+        "value": "choice_82_14_1"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "gform_submit_button_82"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
