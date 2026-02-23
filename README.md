@@ -9,3 +9,6 @@ java -jar SeInterpreter *path_to_selenium_json_file*
 
 Ces images sont élaborées de façon très incrémentale.
 
+## Stack
+
+[![Stack](https://skillicons.dev/icons?i=java,docker,selenium&theme=dark)](https://skillicons.dev)
